@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoVida - Acceso</title>
+
+    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <!-- LOGO Y TÍTULO -->
+            <h1>🌱 EcoVida</h1>
+
+            <h2>Bienvenido</h2>
+
+            <p>
+                Inicia sesión o crea una cuenta para continuar con tu pedido.
+            </p>
+
+
+            <!-- PESTAÑAS -->
+            <div class="login-tabs">
+
+                <button type="button" id="btnTabLogin" class="tab-button active" onclick="cambiarPestaña('login')">
+                    🔐 Iniciar Sesión
+                </button>
+
+                <button type="button" id="btnTabRegistro" class="tab-button" onclick="cambiarPestaña('registro')">
+                    📝 Registrarse
+                </button>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- FORMULARIO DE LOGIN -->
+            <!-- ========================= -->
+
+            <div id="formularioLogin" class="formulario-auth active">
+
+                <h3>Iniciar Sesión</h3>
+
+                <form onsubmit="manejarFormularioLogin(event)">
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email" id="loginEmail" placeholder="ejemplo@gmail.com" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Contraseña
+                        </label>
+
+                        <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+
+                    </div>
+
+
+                    <button type="submit" class="btn-login">
+                        🔐 Iniciar Sesión
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- FORMULARIO DE REGISTRO -->
+            <!-- ========================= -->
+
+            <div id="formularioRegistro" class="formulario-auth">
+
+                <h3>Crear una cuenta</h3>
+
+                <form onsubmit="registrarUsuario(event)">
+
+                    <div class="form-group">
+
+                        <label for="registroNombre">
+                            Nombre completo
+                        </label>
+
+                        <input type="text" id="registroNombre" placeholder="Ingresa tu nombre" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroEmail">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email" id="registroEmail" placeholder="ejemplo@gmail.com" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroPassword">
+                            Contraseña
+                        </label>
+
+                        <input type="password" id="registroPassword" placeholder="Crea una contraseña" minlength="6"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroPasswordConfirm">
+                            Confirmar contraseña
+                        </label>
+
+                        <input type="password" id="registroPasswordConfirm" placeholder="Repite tu contraseña"
+                            minlength="6" required>
+
+                    </div>
+
+
+                    <button type="submit" class="btn-login">
+                        📝 Crear Cuenta
+                    </button>
+                </form>
+            </div>
+
+
+            <!-- VOLVER A ECOVIDA -->
+
+            <div class="volver">
+
+                <a href="/index.html">
+                    ← Volver a EcoVida
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="/JS/ecovida.js"></script>
+    <script src="/JS/login.js"></script>
+    <script src="/JS/login-diseño.js"></script>
+
+</body>
+
+</html>
